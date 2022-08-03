@@ -48,24 +48,19 @@ public class GameScreen implements Screen {
       canoImg = new Texture(Gdx.files.internal("cano.png"));
       cano = new Sprite(canoImg);
       cano.flip(false, true);
-      cano.setRotation(0.25f);
 
       ultimoCano = 450;
 
       birdImg = new Texture(Gdx.files.internal("flappy.png"));
       TextureRegion tmp[][] = TextureRegion.split(birdImg, birdImg.getWidth() / COLUNA, birdImg.getHeight() );
-      TextureRegion[] puloFrames = new TextureRegion[COLUNA * 1];
+      TextureRegion puloFrames[] = new TextureRegion[COLUNA * 1];
       int index = 0;
          for (int j= 0; j < COLUNA; j++){
             puloFrames[index++] = tmp[0][j];
          }
       puloAnimation = new Animation<TextureRegion>(0.085f, puloFrames);
       tempo = 0f;
-      bird = new Rectangle();
-      bird.x = 20;
-      bird.y = 400;
-      bird.width = 32;
-      bird.height = 32;
+      bird = new Rectangle(20, 400, 32, 32);
       velocidade = 0;
       pipe = new Rectangle();
       pipes = new Array<Rectangle>();
@@ -73,7 +68,6 @@ public class GameScreen implements Screen {
       camera.position.set(camera.viewportWidth / 2f, camera.viewportHeight / 2f, 0);    
       camera.setToOrtho(false, 480, 800);
       camera.update();
-
       spawnPipe(ultimoCano);
       pular();
    }

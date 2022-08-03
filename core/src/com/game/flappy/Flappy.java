@@ -35,5 +35,4 @@ public class Flappy extends Game {
 		secondLayer.dispose();
 		font.dispose();
 	}
-
 }
