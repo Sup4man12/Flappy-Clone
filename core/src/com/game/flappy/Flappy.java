@@ -12,14 +12,14 @@ public class Flappy extends Game {
 	BitmapFont font;
 	int bestScore;
 
-   Texture cenarioImg;
-   Texture groundImg;
+	Texture cenarioImg;
+	Texture groundImg;
 	public void create() {
 		bestScore = 0;
 		batch = new SpriteBatch();
 		secondLayer = new SpriteBatch();
-      cenarioImg = new Texture(Gdx.files.internal("cenario.png"));
-      groundImg = new Texture(Gdx.files.internal("ground.png"));
+		cenarioImg = new Texture(Gdx.files.internal("cenario.png"));
+		groundImg = new Texture(Gdx.files.internal("ground.png"));
 		// Use LibGDX's default Arial font.
 		font = new BitmapFont();
 		this.setScreen(new MenuScreen(this));
@@ -29,8 +29,8 @@ public class Flappy extends Game {
 	}
 
 	public void dispose() {
-           groundImg.dispose();
-           cenarioImg.dispose();
+		groundImg.dispose();
+		cenarioImg.dispose();
 		batch.dispose();
 		secondLayer.dispose();
 		font.dispose();
