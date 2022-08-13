@@ -22,7 +22,7 @@ public class GameOver implements Screen {
       game.batch.begin();
       game.batch.draw(game.cenarioImg,0,0);
       game.batch.draw(game.groundImg,0,0);
-      game.font.draw(game.batch, "GaymeOver" ,   480/2 - 40  , 800/2 );
+      game.font.draw(game.batch, "GameOver" ,   480/2 - 40  , 800/2 );
       game.font.draw(game.batch, "Best Score: " + game.bestScore ,   480/2 - 40  , 800/2 -20 );
       game.font.draw(game.batch, "Pressione [SPACE] para começar" ,   480/2 - 110  , 800/2 -40 );
       game.batch.end();
